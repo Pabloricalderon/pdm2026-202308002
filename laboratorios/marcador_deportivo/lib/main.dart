@@ -77,10 +77,16 @@ class _MyHomePageState extends State<MyHomePage> {
   void _decrementCounter(int team) {
     setState((){
       if (team == 1) {
-        _counterA--;
+        if (_counterA > 0){
+          _counterA--;
+        }
+        
       } else {
-        _counterB--;
+        if (_counterB > 0) {
+          _counterB--;
+        }
       }
+      
     });
   }
 
